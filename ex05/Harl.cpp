@@ -27,9 +27,11 @@ void Harl::error(void)
 
 void Harl::complain(std::string level)
 {
+
     std::string levels[4] = { "DEBUG", "INFO", "WARNING", "ERROR" };
 
-    void (Harl::*funcs[4])(void) = {
+    void (Harl::*funcs[4])(void) =
+    {
         &Harl::debug,
         &Harl::info,
         &Harl::warning,
@@ -45,5 +47,5 @@ void Harl::complain(std::string level)
         }
     }
 
-    std::cout << "Unknown level" << std::endl;
+    std::cout << "level not found" << std::endl;
 }

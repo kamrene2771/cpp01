@@ -44,5 +44,5 @@ void Harl::complain(std::string level)
         }
     }
 
-    std::cout << "[ Unknown level ]" << std::endl;
+    std::cout << "level not found" << std::endl;
 }
