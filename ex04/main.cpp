@@ -21,7 +21,7 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    std::ifstream infile(filename);
+    std::ifstream infile(argv[1]);
     if (!infile)
     {
         std::cout << "Error: cannot open input file\n";
@@ -57,8 +57,10 @@ int main(int argc, char **argv)
         result += s2;
         pos = found + s1.length();
     }
+    filename = filename + ".replace";
+    const char *str = filename.c_str();
 
-    std::ofstream outfile(filename + ".replace");
+    std::ofstream outfile(str);
     if (!outfile)
     {
         std::cout << "Error: cannot open output file\n";

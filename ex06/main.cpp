@@ -30,19 +30,34 @@ int main(int argc, char **argv)
         case 0:
             std::cout << "[ DEBUG ]" << std::endl;
             harl.complain("DEBUG");
+            std::cout << "[ INFO ]" << std::endl;
+            harl.complain("INFO");
+            std::cout << "[ WARNING ]" << std::endl;
+            harl.complain("WARNING");
+            std::cout << "[ ERROR ]" << std::endl;
+            harl.complain("ERROR");
+            break;
         case 1:
             std::cout << "[ INFO ]" << std::endl;
             harl.complain("INFO");
+            std::cout << "[ WARNING ]" << std::endl;
+            harl.complain("WARNING");
+            std::cout << "[ ERROR ]" << std::endl;
+            harl.complain("ERROR");
+            break;
         case 2:
             std::cout << "[ WARNING ]" << std::endl;
             harl.complain("WARNING");
+            std::cout << "[ ERROR ]" << std::endl;
+            harl.complain("ERROR");
+            break;
         case 3:
             std::cout << "[ ERROR ]" << std::endl;
             harl.complain("ERROR");
             break;
 
         default:
-            std::cout << "complaining about another problems" << std::endl;
+            std::cout << "complaining about something else" << std::endl;
     }
 
     return 0;
